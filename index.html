@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Punjab Warriors Cricket Club | Elite Cricket Legacy
+</title>
+
+
+<meta name="description" content="
+Punjab Warriors Cricket Club - A premium cricket club built on passion,
+discipline, power and excellence.
+">
+
+
+<meta name="keywords" content="
+Punjab Warriors Cricket Club,
+Punjab Cricket,
+Elite Cricket,
+T20 Cricket,
+Cricket Club
+">
+
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="
+https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap
+"
+rel="stylesheet">
+
+
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<!-- Icons -->
+<link
+rel="stylesheet"
+href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+">
+
+
+
+<script>
+
+tailwind.config = {
+
+theme: {
+
+extend: {
+
+
+colors:{
+
+
+gold:"#D4AF37",
+
+brass:"#C69C6D",
+
+silver:"#C0C0C0",
+
+blacklux:"#050505"
+
+},
+
+
+fontFamily:{
+
+
+luxury:[
+"Cinzel",
+"serif"
+],
+
+
+modern:[
+"Montserrat",
+"sans-serif"
+]
+
+}
+
+
+}
+
+}
+
+}
+
+
+</script>
+
+
+
+
+
+<style>
+
+
+/* ============================
+GLOBAL
+============================ */
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+background:
+
+radial-gradient(
+circle at top,
+#3a2b05,
+#050505 55%
+);
+
+color:white;
+
+font-family:
+'Montserrat',
+sans-serif;
+
+overflow-x:hidden;
+
+}
+
+
+
+
+
+/* ============================
+METALLIC GOLD TEXT
+============================ */
+
+
+.gold-text{
+
+
+background:
+
+linear-gradient(
+
+120deg,
+
+#8a6500,
+
+#ffd700,
+
+#fff6b7,
+
+#d4af37,
+
+#8a6500
+
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+background-size:200%;
+
+
+animation:
+goldMove 4s linear infinite;
+
+
+}
+
+
+
+@keyframes goldMove{
+
+
+0%{
+
+background-position:0%;
+
+}
+
+
+100%{
+
+background-position:200%;
+
+}
+
+
+}
+
+
+
+
+
+/* ============================
+LUXURY LOADER
+============================ */
+
+
+#loader{
+
+
+background:
+
+radial-gradient(
+
+circle,
+
+#4b3805,
+
+#000
+
+);
+
+
+}
+
+
+
+.loader-title{
+
+
+font-family:
+'Cinzel';
+
+
+letter-spacing:5px;
+
+
+animation:
+
+loaderGlow 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes loaderGlow{
+
+
+from{
+
+
+text-shadow:
+
+0 0 10px #d4af37;
+
+
+}
+
+
+to{
+
+
+text-shadow:
+
+0 0 35px gold,
+0 0 60px gold;
+
+
+}
+
+
+}
+
+
+
+
+
+/* ============================
+GLASS EFFECT
+============================ */
+
+
+.glass{
+
+
+background:
+
+rgba(255,255,255,0.05);
+
+
+backdrop-filter:
+
+blur(15px);
+
+
+border:
+
+1px solid rgba(212,175,55,.35);
+
+
+box-shadow:
+
+0 0 30px rgba(212,175,55,.15);
+
+
+}
+
+
+
+
+
+/* ============================
+GOLD BUTTON
+============================ */
+
+
+.gold-btn{
+
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#8a6500,
+
+#ffd700,
+
+#b8860b
+
+);
+
+
+color:black;
+
+
+font-weight:800;
+
+
+border-radius:14px;
+
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.5);
+
+
+transition:.4s;
+
+
+}
+
+
+
+.gold-btn:hover{
+
+
+transform:
+
+translateY(-5px)
+scale(1.05);
+
+
+box-shadow:
+
+0 0 40px gold;
+
+
+}
+
+
+
+
+
+/* ============================
+METALLIC BORDER
+============================ */
+
+
+.metal-border{
+
+
+border:
+
+2px solid transparent;
+
+
+background:
+
+linear-gradient(
+#050505,
+#050505
+)
+
+padding-box,
+
+
+linear-gradient(
+
+135deg,
+
+gold,
+
+silver,
+
+gold
+
+)
+
+border-box;
+
+
+
+}
+
+
+
+
+
+/* ============================
+GOLD PARTICLES
+============================ */
+
+
+.particle{
+
+
+position:absolute;
+
+
+width:5px;
+
+height:5px;
+
+
+background:#ffd700;
+
+
+border-radius:50%;
+
+
+box-shadow:
+
+0 0 15px gold;
+
+
+animation:
+
+floatParticle linear infinite;
+
+
+}
+
+
+
+@keyframes floatParticle{
+
+
+from{
+
+
+transform:
+
+translateY(100vh);
+
+
+opacity:0;
+
+
+}
+
+
+50%{
+
+
+opacity:1;
+
+
+}
+
+
+to{
+
+
+transform:
+
+translateY(-10vh);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+/* ============================
+SHINE LINE
+============================ */
+
+
+.gold-line{
+
+
+height:3px;
+
+
+width:100%;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+gold,
+
+white,
+
+gold,
+
+transparent
+
+);
+
+
+animation:
+
+lineMove 3s infinite;
+
+
+}
+
+
+
+@keyframes lineMove{
+
+
+0%{
+
+background-position:-500px;
+
+}
+
+
+100%{
+
+background-position:500px;
+
+}
+
+
+}
+
+
+
+
+/* ============================
+PLAYER IMAGE
+============================ */
+
+
+.player-img{
+
+
+object-fit:cover;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.player-card:hover .player-img{
+
+
+transform:
+
+scale(1.08);
+
+
+}
+
+
+
+
+
+/* ============================
+HIDE SCROLLBAR
+============================ */
+
+
+::-webkit-scrollbar{
+
+
+width:8px;
+
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+
+background:
+
+linear-gradient(
+gold,
+black
+);
+
+
+border-radius:20px;
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ==========================
+LUXURY LOADER
+========================== -->
+
+
+<div id="loader"
+
+class="
+fixed inset-0
+z-[9999]
+flex
+items-center
+justify-center
+">
+
+
+<div class="text-center">
+
+
+<h1
+
+class="
+loader-title
+text-4xl
+md:text-6xl
+font-bold
+gold-text
+">
+
+PUNJAB WARRIORS
+
+</h1>
+
+
+<p
+
+class="
+mt-4
+tracking-[8px]
+text-gray-300
+">
+
+CRICKET CLUB
+
+</p>
+
+
+</div>
+
+
+</div>
