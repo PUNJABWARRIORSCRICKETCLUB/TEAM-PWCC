@@ -395,20 +395,13 @@ METALLIC BORDER
 
 .metal-border{
 
-
-border:
-
-2px solid transparent;
-
+border:2px solid transparent;
 
 background:
+linear-gradient(#050505,#050505) padding-box,
+linear-gradient(135deg,gold,silver,gold) border-box;
 
-linear-gradient(
-#050505,
-#050505
-)
-
-padding-box,
+}
 
 
 linear-gradient(
@@ -5855,7 +5848,7 @@ impact:
 
 
 };
-  </Script>
+ 
     
   function openProfile(id){
 
@@ -5970,5 +5963,39 @@ document
 },2000)
 
 }
+      function openTeamLogo(){
+
+window.open(
+"https://i.postimg.cc/kGDjtBPJ/final-logo.jpg",
+"_blank"
+);
+
+}
+
+
+function openJersey(){
+
+document
+.getElementById("jerseyModal")
+.classList.remove("hidden");
+
+}
+
+
+function closeJersey(){
+
+document
+.getElementById("jerseyModal")
+.classList.add("hidden");
+
+}
+
+
+function openSponsorVideo(){
+
+alert("Sponsor video coming soon");
+
+}
+       </Script>
     </body>
 </html>
