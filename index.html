@@ -3763,180 +3763,6 @@ CLOSE
 
 
 
-<!-- ==========================
-SPONSORS
-========================== -->
-
-
-<section
-
-id="sponsors"
-
-class="
-py-24
-px-6
-bg-black/50
-">
-
-
-<div class="max-w-6xl mx-auto text-center">
-
-
-<div class="gold-line mb-10"></div>
-
-
-
-<h2
-
-class="
-font-luxury
-text-4xl
-md:text-6xl
-gold-text
-mb-5
-">
-
-OUR PARTNERS
-
-</h2>
-
-
-
-<p class="text-gray-300 mb-12">
-
-Strategic partners supporting the Warriors journey.
-
-</p>
-
-
-
-
-<div
-
-class="
-grid
-md:grid-cols-3
-gap-10
-">
-
-
-
-
-
-<!-- SPONSOR CARD 1 -->
-
-
-<div
-
-class="
-glass
-rounded-3xl
-p-8
-hover:scale-105
-transition
-">
-
-<img
-
-src="YOUR_SPONSOR_LOGO_1"
-
-class="
-h-32
-mx-auto
-object-contain
-"
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<!-- SPONSOR CARD 2 -->
-
-
-<div
-
-class="
-glass
-rounded-3xl
-p-8
-hover:scale-105
-transition
-">
-
-<img
-
-src="YOUR_SPONSOR_LOGO_2"
-
-class="
-h-32
-mx-auto
-object-contain
-"
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<!-- SPONSOR CARD 3 -->
-
-
-<div
-
-class="
-glass
-rounded-3xl
-p-8
-hover:scale-105
-transition
-">
-
-
-<h3
-
-class="
-gold-text
-text-2xl
-font-bold
-">
-
-YOUR BRAND
-
-</h3>
-
-
-<p class="text-gray-400 mt-3">
-
-Become a Warriors partner
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
   <!-- ==========================
 SQUAD SECTION
 ========================== -->
@@ -4625,15 +4451,6 @@ ALL-ROUNDER
 
 </div>
 
-
-
-</div>
-
-
-</div>
-
-
-</section>
   <!-- ==========================
 PLAYERS 11 - 19
 ========================== -->
@@ -5147,6 +4964,14 @@ ROLE
 </div>
 
 </div>
+  </div>  <!-- close grid -->
+
+
+</div>
+
+</section>
+  
+  <Script>
   // =====================================
 // PUNJAB WARRIORS CRICKET CLUB
 // PLAYER DATABASE
@@ -6030,7 +5855,8 @@ impact:
 
 
 };
-  
+  </Script>
+    
   function openProfile(id){
 
 
@@ -6070,6 +5896,10 @@ document.getElementById("sr").innerText=p.sr;
 document.getElementById("avg").innerText=p.avg;
 
 document.getElementById("highest").innerText=p.highest;
+    
+document.getElementById("fours").innerText=p.fours;
+
+document.getElementById("sixes").innerText=p.sixes;
 
 document.getElementById("economy").innerText=p.economy;
 
@@ -6109,3 +5939,36 @@ document
 
 
 }
+    function closeLeague(){
+
+document
+.getElementById("leagueModal")
+.classList.add("hidden");
+
+}
+
+
+function openLeague(type){
+
+let modal=document.getElementById("leagueModal");
+
+modal.classList.remove("hidden");
+
+modal.classList.add("flex");
+
+
+}
+    window.onload=function(){
+
+setTimeout(()=>{
+
+document
+.getElementById("loader")
+.style.display="none";
+
+
+},2000)
+
+}
+    </body>
+</html>
