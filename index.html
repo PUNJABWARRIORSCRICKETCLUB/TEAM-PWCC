@@ -2715,20 +2715,37 @@ PUNJAB WARRIORS CRICKET CLUB
 ===================================== -->
 
 
-<div
-
-id="playerModal"
-
+<div id="playerModal"
 class="
 fixed
 inset-0
 hidden
+z-[9999]
+bg-black/95
 justify-center
 items-center
-bg-black/95
-z-[999]
 p-4
+overflow-y-auto
 ">
+  <button
+onclick="closeProfile()"
+class="
+absolute
+top-5
+right-5
+z-[10000]
+bg-yellow-500
+text-black
+font-bold
+w-12
+h-12
+rounded-full
+text-2xl
+hover:scale-110
+transition
+">
+✕
+</button>
 
 
 <!-- BACKGROUND PLAYER IMAGE -->
@@ -2775,30 +2792,22 @@ to-black
 <!-- MAIN CARD -->
 
 
-<div
-
-class="
+<div class="
 relative
 z-20
 w-full
-max-w-6xl
+max-w-5xl
+max-h-[90vh]
+overflow-y-auto
 rounded-3xl
-overflow-hidden
 border
 border-yellow-400
-
 shadow-[0_0_60px_rgba(255,215,0,0.5)]
-
 bg-gradient-to-br
-
 from-black
-
 via-gray-900
-
 to-yellow-900/40
-
 p-6
-
 ">
 
 
@@ -2891,22 +2900,14 @@ justify-center
 <img
 
 id="playerCardImage"
-
 class="
-
 w-full
-
-h-[600px]
-
-object-cover
-
-object-top
-
+max-h-[450px]
+object-contain
 rounded-3xl
-
 border
-
 border-yellow-500
+"
 
 shadow-[0_0_40px_rgba(255,215,0,.4)]
 
@@ -5190,22 +5191,15 @@ document
 }
  
     
-  function openProfile(id){
+ function openProfile(player){
 
+let modal=document.getElementById("playerModal");
 
-let p = players[id];
+modal.classList.remove("hidden");
 
+document.body.style.overflow="hidden";
 
-document
-.getElementById("playerModal")
-.classList
-.remove("hidden");
-
-
-document
-.getElementById("playerModal")
-.classList
-.add("flex");
+}
 
 
 
@@ -5252,23 +5246,12 @@ document.getElementById("impact").innerText=p.impact;
 
 function closeProfile(){
 
+document.getElementById("playerModal")
+.classList.add("hidden");
 
-document
+document.body.style.overflow="auto";
 
-.getElementById("playerModal")
-
-.classList
-
-.add("hidden");
-
-
-document
-
-.getElementById("playerModal")
-
-.classList
-
-.remove("flex");
+}
 
 
 }
