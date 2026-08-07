@@ -953,6 +953,84 @@ color:white;
 transform:translateX(-10px) scale(1.18);
 
 }
+  /* PREMIUM INTRO */
+
+#logoIntro{
+
+opacity:0;
+
+transition:1s;
+
+background:
+radial-gradient(circle,#3d2d00,#000);
+
+}
+
+.introLogo{
+
+width:240px;
+
+filter:
+
+drop-shadow(0 0 15px gold)
+
+drop-shadow(0 0 40px rgba(255,215,0,.7));
+
+animation:
+
+logoLuxury 5s forwards;
+
+}
+
+@keyframes logoLuxury{
+
+0%{
+
+transform:
+
+perspective(900px)
+rotateY(-360deg)
+scale(.1);
+
+opacity:0;
+
+}
+
+25%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:
+
+perspective(900px)
+rotateY(0deg)
+scale(1.1);
+
+}
+
+70%{
+
+transform:
+
+scale(1);
+
+}
+
+100%{
+
+transform:
+
+scale(1);
+
+opacity:1;
+
+}
+
+}
 
 
 </style>
@@ -1013,6 +1091,37 @@ CRICKET CLUB
 </p>
   </div>
 
+
+</div>
+  <!-- PREMIUM LOGO INTRO -->
+
+<div id="logoIntro"
+
+class="fixed inset-0 z-[9998]
+flex items-center justify-center
+bg-black hidden">
+
+<div class="text-center">
+
+<img
+
+src="YOUR_LOGO_LINK"
+
+class="introLogo mx-auto">
+
+<h2 class="gold-text text-4xl font-bold mt-8">
+
+PUNJAB WARRIORS
+
+</h2>
+
+<p class="tracking-[10px] text-gray-300 mt-3">
+
+CRICKET CLUB
+
+</p>
+
+</div>
 
 </div>
   <!-- ==========================
@@ -6091,16 +6200,33 @@ modal.classList.add("flex");
 
 
 }
-    window.onload=function(){
+   window.onload=function(){
+
+const loader=document.getElementById("loader");
+
+const intro=document.getElementById("logoIntro");
 
 setTimeout(()=>{
 
-document
-.getElementById("loader")
-.style.display="none";
+loader.style.display="none";
 
+intro.classList.remove("hidden");
 
-},2000)
+intro.style.opacity="1";
+
+},2000);
+
+setTimeout(()=>{
+
+intro.style.opacity="0";
+
+setTimeout(()=>{
+
+intro.style.display="none";
+
+},1000);
+
+},7000);
 
 }
       function openTeamLogo(){
