@@ -1032,7 +1032,100 @@ opacity:1;
 }
 
 }
+/*==============================
+FOOTER SOCIAL ICONS
+==============================*/
 
+.footerSocial{
+
+width:60px;
+height:60px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,215,0,.35);
+
+backdrop-filter:blur(14px);
+
+font-size:24px;
+
+color:#FFD700;
+
+transition:.45s;
+
+box-shadow:0 0 18px rgba(255,215,0,.25);
+
+}
+
+.footerSocial:hover{
+
+transform:translateY(-8px) scale(1.15);
+
+background:rgba(255,215,0,.15);
+
+box-shadow:
+0 0 35px gold,
+0 0 60px rgba(255,215,0,.5);
+
+color:white;
+
+}
+
+/*==============================
+FOOTER LINKS
+==============================*/
+
+.footerLink{
+
+color:#d4d4d4;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.footerLink:hover{
+
+color:#FFD700;
+
+}
+
+.footerLink::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0%;
+
+height:2px;
+
+background:gold;
+
+transition:.4s;
+
+}
+
+.footerLink:hover::after{
+
+width:100%;
+
+}
 
 </style>
 
@@ -5312,131 +5405,112 @@ function openSponsorVideo(){
 alert("Sponsor video coming soon");
 
 }
-       </Script>
-         <footer class="mt-24 border-t border-yellow-500/20 bg-black/80">
+       </Script><!-- =====================================
+LUXURY FOOTER
+===================================== -->
 
-<div class="max-w-7xl mx-auto py-16 px-6">
+<footer class="relative mt-24 overflow-hidden">
 
-<div class="grid md:grid-cols-3 gap-10">
+    <!-- Gold Divider -->
+    <div class="gold-line mb-10"></div>
 
-<!-- CLUB -->
+    <div class="glass border-t border-yellow-500/30">
 
-<div>
+        <div class="max-w-7xl mx-auto py-16 px-6 text-center">
 
-<h2 class="text-2xl font-bold gold-text">
+            <!-- Club Name -->
+            <h2 class="font-luxury text-4xl md:text-5xl gold-text font-black tracking-wider">
+                PUNJAB WARRIORS
+            </h2>
 
-Punjab Warriors
+            <p class="text-gray-300 mt-5 max-w-3xl mx-auto leading-relaxed">
+                Elite cricket club representing discipline, passion and excellence in Ontario.
+            </p>
 
-</h2>
+            <!-- Follow Text -->
+            <p class="text-yellow-400 tracking-[4px] uppercase text-sm mt-10">
+                Follow • Support • Share The Warrior Legacy
+            </p>
 
-<p class="mt-5 text-gray-400 leading-7">
+            <!-- =====================
+            SOCIAL BAR
+            ====================== -->
 
-Elite cricket club representing discipline, passion and excellence in Ontario.
+            <div class="flex justify-center flex-wrap gap-5 mt-8">
 
-</p>
+                <a href="mailto:teampunjabwarriors@gmail.com"
+                   class="footerSocial">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-</div>
+                <a href="https://www.facebook.com/profile.php?id=61593089097508
+"
+                   target="_blank"
+                   class="footerSocial">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
 
-<!-- QUICK LINKS -->
+                <a href="https://www.instagram.com/punjabwarriors_cc/"
+                   target="_blank"
+                   class="footerSocial">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
-<div>
+                <a href="https://www.youtube.com/@PUNJABWARRIORSCRICKETCLUB"
+                   target="_blank"
+                   class="footerSocial">
+                    <i class="fab fa-youtube"></i>
+                </a>
 
-<h3 class="text-yellow-400 font-bold mb-6">
+                <a href="https://www.tiktok.com/@punjab.warriors.c?lang=en"
+                   target="_blank"
+                   class="footerSocial">
+                    <i class="fab fa-tiktok"></i>
+                </a>
 
-Quick Links
+                <a href="https://snapchat.com/t/pSPeTXd0"
+                   target="_blank"
+                   class="footerSocial">
+                    <i class="fab fa-snapchat-ghost"></i>
+                </a>
 
-</h3>
+            </div>
 
-<ul class="space-y-3 text-gray-400">
+            <!-- =====================
+            QUICK LINKS
+            ====================== -->
 
-<li><a href="#about" class="hover:text-yellow-400">About</a></li>
+            <div class="flex justify-center flex-wrap gap-8 mt-12">
 
-<li><a href="#leagues" class="hover:text-yellow-400">Leagues</a></li>
+                <a href="#about" class="footerLink">ABOUT</a>
 
-<li><a href="#squad" class="hover:text-yellow-400">Players</a></li>
+                <a href="#leagues" class="footerLink">LEAGUES</a>
 
-<li><a href="#sponsors" class="hover:text-yellow-400">Sponsors</a></li>
+                <a href="#squad" class="footerLink">SQUAD</a>
 
-</ul>
+                <a href="#sponsors" class="footerLink">SPONSORS</a>
 
-</div>
+                <a href="#" class="footerLink">STORE</a>
 
-<!-- SOCIAL -->
+            </div>
 
-<div>
+            <!-- Copyright -->
 
-<h3 class="text-yellow-400 font-bold mb-6">
+            <div class="mt-14">
 
-Connect
+                <p class="text-gray-500 text-sm">
+                    © 2026 Punjab Warriors Cricket Club
+                </p>
 
-</h3>
+                <p class="text-gray-600 text-xs mt-2 tracking-widest">
+                    BUILT WITH PASSION • POWER • PRIDE
+                </p>
 
-<div class="space-y-4">
+            </div>
 
-<a href="mailto:YOUR_EMAIL"
-class="flex items-center gap-3 hover:text-yellow-400">
+        </div>
 
-<i class="fa-solid fa-envelope"></i>
-
-Email
-
-</a>
-
-<a href="https://facebook.com/YOURPAGE"
-target="_blank"
-class="flex items-center gap-3 hover:text-yellow-400">
-
-<i class="fab fa-facebook"></i>
-
-Facebook
-
-</a>
-
-<a href="https://instagram.com/YOURPAGE"
-target="_blank"
-class="flex items-center gap-3 hover:text-yellow-400">
-
-<i class="fab fa-instagram"></i>
-
-Instagram
-
-</a>
-
-<a href="https://tiktok.com/@YOURPAGE"
-target="_blank"
-class="flex items-center gap-3 hover:text-yellow-400">
-
-<i class="fab fa-tiktok"></i>
-
-TikTok
-
-</a>
-
-<a href="https://youtube.com/@YOURCHANNEL"
-target="_blank"
-class="flex items-center gap-3 hover:text-yellow-400">
-
-<i class="fab fa-youtube"></i>
-
-YouTube
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="gold-line my-10"></div>
-
-<div class="text-center text-gray-500">
-
-© 2026 Punjab Warriors Cricket Club • All Rights Reserved
-
-</div>
-
-</div>
+    </div>
 
 </footer>
     </body>
