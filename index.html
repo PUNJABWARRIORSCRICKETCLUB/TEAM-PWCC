@@ -66,13 +66,12 @@ extend: {
 
 colors:{
 
-
-gold:"#D4AF37",
-
-brass:"#C69C6D",
-
-silver:"#C0C0C0",
-
+gold:"#C7A75A",
+goldLight:"#E6D3A3",
+goldDark:"#8F6B2E",
+champagne:"#F2E2B8",
+brass:"#B89452",
+silver:"#CFCFCF",
 blacklux:"#050505"
 
 },
@@ -155,37 +154,32 @@ METALLIC GOLD TEXT
 
 .gold-text{
 
-
 background:
-
 linear-gradient(
-
 120deg,
 
-#8a6500,
+#7A5B22 0%,
 
-#ffd700,
+#C7A75A 20%,
 
-#fff6b7,
+#F4E7C0 40%,
 
-#d4af37,
+#E6D3A3 50%,
 
-#8a6500
+#C7A75A 65%,
+
+#8F6B2E 100%
 
 );
 
+background-size:300%;
 
 -webkit-background-clip:text;
+background-clip:text;
 
 color:transparent;
 
-
-background-size:200%;
-
-
-animation:
-goldMove 4s linear infinite;
-
+animation:goldMove 7s linear infinite;
 
 }
 
@@ -263,10 +257,13 @@ loaderGlow 2s infinite alternate;
 
 from{
 
-
 text-shadow:
 
-0 0 10px #d4af37;
+0 0 20px #C7A75A,
+
+0 0 40px #E6D3A3,
+
+0 0 70px rgba(199,167,90,.5);
 
 
 }
@@ -274,11 +271,10 @@ text-shadow:
 
 to{
 
+box-shadow:
 
-text-shadow:
-
-0 0 35px gold,
-0 0 60px gold;
+0 0 25px rgba(230,211,163,.35);,
+0 0 40px rgba(199,167,90,.45);
 
 
 }
@@ -331,23 +327,35 @@ GOLD BUTTON
 
 .gold-btn{
 
-
 background:
 
 linear-gradient(
 
 135deg,
 
-#8a6500,
+#7A5B22,
 
-#ffd700,
+#C7A75A,
 
-#b8860b
+#F4E7C0,
+
+#C7A75A,
+
+#8F6B2E
 
 );
 
+color:#111;
 
-color:black;
+font-weight:800;
+
+box-shadow:
+
+0 0 25px rgba(199,167,90,.35);
+
+transition:.45s;
+
+}
 
 
 font-weight:800;
@@ -370,24 +378,16 @@ transition:.4s;
 
 .gold-btn:hover{
 
-
 transform:
 
-translateY(-5px)
+translateY(-4px)
 scale(1.05);
-
 
 box-shadow:
 
-0 0 40px gold;
-
+0 0 45px rgba(230,211,163,.45);
 
 }
-
-
-
-
-
 /* ============================
 METALLIC BORDER
 ============================ */
@@ -408,11 +408,9 @@ linear-gradient(
 
 135deg,
 
-gold,
-
-silver,
-
-gold
+#C7A75A,
+#F4E7C0,
+#C7A75A
 
 )
 
@@ -442,7 +440,7 @@ width:5px;
 height:5px;
 
 
-background:#ffd700;
+background:#E6D3A3;
 
 
 border-radius:50%;
@@ -525,21 +523,13 @@ width:100%;
 background:
 
 linear-gradient(
-
 90deg,
-
 transparent,
-
-gold,
-
-white,
-
-gold,
-
+#C7A75A,
+#F4E7C0,
+#C7A75A,
 transparent
-
 );
-
 
 animation:
 
@@ -646,7 +636,7 @@ rgba(255,255,255,.05)
 
 border:
 
-1px solid rgba(255,215,0,.5);
+1px solid rgba(230,211,163,.25);
 
 border-radius:18px;
 
@@ -665,7 +655,7 @@ font-size:1.5rem;
 
 font-weight:900;
 
-color:#ffd700;
+color:#E6D3A3;
 
 }
 
@@ -704,7 +694,7 @@ rgba(0,0,0,.8)
 
 border:
 
-1px solid rgba(255,215,0,.5);
+1px solid rgba(230,211,163,.25);
 
 
 border-radius:25px;
@@ -734,8 +724,7 @@ scale(1.05);
 
 box-shadow:
 
-0 0 35px rgba(255,215,0,.5);
-
+0 0 35px rgba(199,167,90,.18);
 
 }
 
@@ -756,7 +745,7 @@ margin-bottom:15px;
 .store-card h3{
 
 
-color:#FFD700;
+color:#E6D3A3;
 
 font-size:20px;
 
@@ -799,7 +788,7 @@ rgba(0,0,0,.9)
 
 border:
 
-1px solid rgba(255,215,0,.6);
+1px solid rgba(230,211,163,.25);
 
 
 border-radius:30px;
@@ -813,7 +802,7 @@ transition:.5s;
 
 box-shadow:
 
-0 0 25px rgba(255,215,0,.15);
+0 0 35px rgba(199,167,90,.18);
 
 
 }
@@ -830,7 +819,7 @@ translateY(-15px);
 
 box-shadow:
 
-0 0 50px rgba(255,215,0,.6);
+0 0 35px rgba(199,167,90,.18);
 
 
 }
@@ -888,7 +877,7 @@ font-size:22px;
 font-weight:900;
 
 
-color:#FFD700;
+color:#E6D3A3;
 
 
 }
@@ -920,7 +909,7 @@ margin:8px auto;
 
 border-radius:14px;
 
-color:#FFD700;
+color:#E6D3A3;
 
 font-size:22px;
 
@@ -1055,7 +1044,7 @@ backdrop-filter:blur(14px);
 
 font-size:24px;
 
-color:#FFD700;
+color:#E6D3A3;
 
 transition:.45s;
 
@@ -1097,7 +1086,7 @@ position:relative;
 
 .footerLink:hover{
 
-color:#FFD700;
+color:#E6D3A3;
 
 }
 
