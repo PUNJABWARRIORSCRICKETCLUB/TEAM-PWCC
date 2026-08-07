@@ -65,16 +65,15 @@ extend: {
 
 
 colors:{
-
-gold:"#C7A75A",
-goldLight:"#E6D3A3",
-goldDark:"#8F6B2E",
-champagne:"#F2E2B8",
-brass:"#B89452",
-silver:"#CFCFCF",
+gold:"#B68A35",
+goldLight:"#F6E7B8",
+goldDark:"#6E4F16",
+champagne:"#FFF2CC",
+brass:"#9B7228",
+silk:"#EAD8A6",
+silver:"#D7D7D7",
 blacklux:"#050505"
-
-},
+}
 
 
 fontFamily:{
@@ -151,24 +150,23 @@ overflow-x:hidden;
 METALLIC GOLD TEXT
 ============================ */
 
-
 .gold-text{
 
 background:
 linear-gradient(
 120deg,
 
-#7A5B22 0%,
+#5E4214 0%,
 
-#C7A75A 20%,
+#A87A28 20%,
 
-#F4E7C0 40%,
+#FFF4D5 40%,
 
-#E6D3A3 50%,
+#EAD8A6 50%,
 
-#C7A75A 65%,
+#C89B3C 65%,
 
-#8F6B2E 100%
+#6B4C1A 100%
 
 );
 
@@ -182,7 +180,6 @@ color:transparent;
 animation:goldMove 7s linear infinite;
 
 }
-
 
 
 @keyframes goldMove{
@@ -259,11 +256,9 @@ from{
 
 text-shadow:
 
-0 0 20px #C7A75A,
-
-0 0 40px #E6D3A3,
-
-0 0 70px rgba(199,167,90,.5);
+0 0 12px rgba(207,166,74,.35),
+0 0 25px rgba(234,216,166,.25),
+0 0 45px rgba(182,138,53,.18)
 
 
 }
@@ -273,8 +268,8 @@ to{
 
 box-shadow:
 
-0 0 25px rgba(230,211,163,.35);,
-0 0 40px rgba(199,167,90,.45);
+0 0 25px rgba(234,216,166,.18),
+0 0 40px rgba(182,138,53,.20);
 
 
 }
@@ -333,15 +328,11 @@ linear-gradient(
 
 135deg,
 
-#7A5B22,
-
-#C7A75A,
-
-#F4E7C0,
-
-#C7A75A,
-
-#8F6B2E
+#5E4214,
+#A87A28,
+#FFF4D5,
+#D3AF5C,
+#7A571E
 
 );
 
@@ -351,7 +342,7 @@ font-weight:800;
 
 box-shadow:
 
-0 0 25px rgba(199,167,90,.35);
+0 0 25px rgba(182,138,53,.22);
 
 transition:.45s;
 
@@ -385,7 +376,7 @@ scale(1.05);
 
 box-shadow:
 
-0 0 45px rgba(230,211,163,.45);
+0 0 45px rgba(234,216,166,.28);
 
 }
 /* ============================
@@ -399,7 +390,7 @@ border:2px solid transparent;
 
 background:
 linear-gradient(#050505,#050505) padding-box,
-linear-gradient(135deg,gold,silver,gold) border-box;
+linear-gradient(135deg,#B68A35,silver,#B68A35) border-box;
 
 }
 
@@ -440,15 +431,14 @@ width:5px;
 height:5px;
 
 
-background:#E6D3A3;
+background:#EAD8A6;
 
 
 border-radius:50%;
 
 
 box-shadow:
-
-0 0 15px gold;
+0 0 8px rgba(182,138,53,.35);
 
 
 animation:
@@ -927,11 +917,11 @@ box-shadow:0 0 15px rgba(255,215,0,.18);
 
 transform:translateX(10px) scale(1.18);
 
-background:rgba(255,215,0,.12);
+background:rgba(182,138,53,.12);
 
 box-shadow:
 0 0 20px gold,
-0 0 35px rgba(255,215,0,.6);
+0 0 35px rgba(182,138,53,.6);
 
 color:white;
 
@@ -951,7 +941,7 @@ opacity:0;
 transition:1s;
 
 background:
-radial-gradient(circle,#3d2d00,#000);
+radial-gradient(circle,#1D1406,#000);
 
 }
 
@@ -963,9 +953,8 @@ max-width:80vw;
 
 filter:
 
-drop-shadow(0 0 20px gold)
-
-drop-shadow(0 0 60px rgba(255,215,0,.8));
+drop-shadow(0 0 10px rgba(182,138,53,.25))
+drop-shadow(0 0 28px rgba(234,216,166,.18));
 
 animation:
 
@@ -1038,7 +1027,7 @@ border-radius:18px;
 
 background:rgba(255,255,255,.05);
 
-border:1px solid rgba(255,215,0,.35);
+border:1px solid rgba(182,138,53,.35);
 
 backdrop-filter:blur(14px);
 
@@ -1048,7 +1037,7 @@ color:#E6D3A3;
 
 transition:.45s;
 
-box-shadow:0 0 18px rgba(255,215,0,.25);
+box-shadow:0 0 18px rgba(182,138,53,.25);
 
 }
 
@@ -1056,11 +1045,11 @@ box-shadow:0 0 18px rgba(255,215,0,.25);
 
 transform:translateY(-8px) scale(1.15);
 
-background:rgba(255,215,0,.15);
+background:rgba(182,138,53,.15);
 
 box-shadow:
 0 0 35px gold,
-0 0 60px rgba(255,215,0,.5);
+0 0 60px rgba(182,138,53,.5);
 
 color:white;
 
@@ -1114,6 +1103,17 @@ transition:.4s;
 
 width:100%;
 
+}
+  .text-metal{
+color:#EAD8A6;
+}
+
+.border-metal{
+border-color:#B68A35;
+}
+
+.bg-metal{
+background:#B68A35;
 }
 
 </style>
@@ -1261,7 +1261,7 @@ h-20
 rounded-full
 cursor-pointer
 border-2
-border-yellow-500
+border-metal-500
 shadow-[0_0_30px_gold]
 hover:scale-110
 transition
@@ -1326,7 +1326,7 @@ CRICKET CLUB
 
 class="
 text-gray-200
-hover:text-yellow-400
+hover:text-metal-400
 transition
 ">
 
@@ -1340,7 +1340,7 @@ ABOUT
 
 class="
 text-gray-200
-hover:text-yellow-400
+hover:text-metal-400
 transition
 ">
 
@@ -1354,7 +1354,7 @@ LEAGUES
 
 class="
 text-gray-200
-hover:text-yellow-400
+hover:text-metal-400
 transition
 ">
 
@@ -1368,7 +1368,7 @@ SQUAD
 
 class="
 text-gray-200
-hover:text-yellow-400
+hover:text-metal-400
 transition
 ">
 
@@ -1395,12 +1395,12 @@ SPONSORS
     <button
         id="socialBtn"
         onclick="toggleSocialMenu()"
-        class="glass w-12 h-12 rounded-xl border border-yellow-500
+        class="glass w-12 h-12 rounded-xl border border-metal-500
                flex items-center justify-center
                hover:scale-110 transition
                shadow-[0_0_20px_rgba(255,215,0,.35)]">
 
-        <i class="fa-solid fa-bars text-yellow-400 text-lg"></i>
+        <i class="fa-solid fa-bars text-metal-400 text-lg"></i>
 
     </button>
 
@@ -1410,7 +1410,7 @@ SPONSORS
                 w-20
                 glass
                 rounded-2xl
-                border border-yellow-500
+                border border-metal-500
                 shadow-[0_0_40px_rgba(255,215,0,.45)]
                 p-3">
 
@@ -1521,7 +1521,7 @@ class="
 absolute
 inset-0
 bg-gradient-to-b
-from-yellow-900/20
+from-metal-900/20
 via-black
 to-black
 ">
@@ -1642,8 +1642,8 @@ px-8
 py-4
 rounded-xl
 border
-border-yellow-500
-hover:bg-yellow-500
+border-metal-500
+hover:bg-metal-500
 hover:text-black
 transition
 ">
@@ -1679,7 +1679,7 @@ w-[500px]
 h-[500px]
 rounded-full
 border
-border-yellow-500/20
+border-metal-500/20
 animate-pulse
 ">
 
@@ -1695,7 +1695,7 @@ w-[700px]
 h-[700px]
 rounded-full
 border
-border-yellow-500/10
+border-metal-500/10
 ">
 
 </div>
@@ -1813,7 +1813,7 @@ class="
 fa-solid
 fa-crown
 text-5xl
-text-yellow-400
+text-metal-400
 mb-5
 ">
 
@@ -1871,7 +1871,7 @@ class="
 fa-solid
 fa-trophy
 text-5xl
-text-yellow-400
+text-metal-400
 mb-5
 ">
 
@@ -1931,7 +1931,7 @@ class="
 fa-solid
 fa-bolt
 text-5xl
-text-yellow-400
+text-metal-400
 mb-5
 ">
 
