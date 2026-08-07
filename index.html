@@ -2720,12 +2720,11 @@ class="
 fixed
 inset-0
 hidden
-z-[9999]
-bg-black/95
 justify-center
 items-center
+bg-black/95
+z-[999]
 p-4
-overflow-y-auto
 ">
 <!-- BACKGROUND PLAYER IMAGE -->
 <img
@@ -2772,10 +2771,9 @@ to-black
 relative
 z-20
 w-full
-max-w-5xl
-max-h-[90vh]
-overflow-y-auto
+max-w-6xl
 rounded-3xl
+overflow-hidden
 border
 border-yellow-400
 shadow-[0_0_60px_rgba(255,215,0,0.5)]
@@ -2878,8 +2876,9 @@ justify-center
 id="playerCardImage"
 class="
 w-full
-max-h-[450px]
-object-contain
+h-[600px]
+object-cover
+object-top
 rounded-3xl
 border
 border-yellow-500
@@ -5162,17 +5161,22 @@ document
 .classList.toggle("hidden");
 
 }
- 
-    
- function openProfile(player){
+    function openProfile(id){
 
-let modal=document.getElementById("playerModal");
+let p = players[id];
 
-modal.classList.remove("hidden");
 
-document.body.style.overflow="hidden";
+document
+.getElementById("playerModal")
+.classList
+.remove("hidden");
 
-}
+
+document
+.getElementById("playerModal")
+.classList
+.add("flex");
+ }
 
 
 
@@ -5228,11 +5232,31 @@ document.body.style.overflow="auto";
 
 
 }
-    function closeLeague(){
+    
+
+
+
+
+function closeProfile(){
+
 
 document
-.getElementById("leagueModal")
-.classList.add("hidden");
+
+.getElementById("playerModal")
+
+.classList
+
+.add("hidden");
+
+
+document
+
+.getElementById("playerModal")
+
+.classList
+
+.remove("flex");
+
 
 }
 
