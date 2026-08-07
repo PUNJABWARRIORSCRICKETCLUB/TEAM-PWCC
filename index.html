@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1116,6 +1117,144 @@ border-color:#B68A35;
 background:#B68A35;
 }
 
+  /* ==============================
+   MOBILE RESPONSIVE SYSTEM
+   Punjab Warriors CC
+================================ */
+
+@media (max-width: 768px) {
+
+
+/* Prevent horizontal scrolling */
+html, body {
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+/* Hero title */
+.loader-title,
+.font-luxury {
+    letter-spacing:2px;
+}
+
+
+/* Main headings */
+.text-8xl {
+    font-size:3rem !important;
+}
+
+.text-6xl {
+    font-size:2.4rem !important;
+}
+
+.text-5xl {
+    font-size:2rem !important;
+}
+
+
+/* Navigation */
+header {
+    padding-left:15px;
+    padding-right:15px;
+}
+
+
+/* Logo */
+header img {
+    width:60px;
+    height:60px;
+}
+
+
+/* Mobile menu spacing */
+#socialMenu {
+    right:10px;
+}
+
+
+/* Hero section */
+.hero {
+  height:100vh;
+   height:100svh;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+/* Buttons */
+.gold-btn,
+button {
+    max-width:100%;
+}
+
+
+/* About cards */
+.grid {
+    gap:20px;
+}
+
+
+/* Glass cards */
+.glass {
+    border-radius:20px;
+}
+
+
+/* League cards */
+.group img {
+    max-height:120px;
+}
+
+
+/* Modal fixes */
+#leagueModal,
+#playerModal,
+#jerseyModal {
+
+    padding:15px;
+
+}
+
+
+/* Player modal */
+#playerCardImage {
+
+    height:auto;
+    max-height:450px;
+
+}
+
+
+/* Sponsor logos */
+.sponsor-logo {
+
+    max-width:180px;
+    margin:auto;
+
+}
+
+
+/* Footer */
+
+footer {
+
+    padding-bottom:30px;
+
+}
+
+
+}
+  /* ===========================
+   GLOBAL IMAGE RESPONSIVENESS
+=========================== */
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
 </style>
 
 
@@ -1319,64 +1458,81 @@ CRICKET CLUB
 <!-- NAV BUTTONS -->
 
 
-<div class="hidden md:flex items-center gap-8">
-
+<div class="hidden md:flex gap-8">
 
 <a href="#about"
-
-class="
-text-gray-200
-hover:text-metal-400
-transition
-">
-
+class="text-gray-200 hover:text-metal-400 transition">
 ABOUT
-
 </a>
-
-
 
 <a href="#leagues"
-
-class="
-text-gray-200
-hover:text-metal-400
-transition
-">
-
+class="text-gray-200 hover:text-metal-400 transition">
 LEAGUES
-
 </a>
-
-
 
 <a href="#squad"
-
-class="
-text-gray-200
-hover:text-metal-400
-transition
-">
-
+class="text-gray-200 hover:text-metal-400 transition">
 SQUAD
-
 </a>
-
-
 
 <a href="#sponsors"
-
-class="
-text-gray-200
-hover:text-metal-400
-transition
-">
-
+class="text-gray-200 hover:text-metal-400 transition">
 SPONSORS
-
 </a>
 
+</div>
+  <div class="md:hidden">
 
+<button 
+onclick="toggleMobileMenu()"
+
+class="
+glass
+w-12
+h-12
+rounded-xl
+border
+border-metal-500
+flex
+items-center
+justify-center
+">
+
+<i class="fa-solid fa-bars text-metal-400"></i>
+
+</button>
+
+</div>
+  <div id="mobileMenu"
+
+class="
+hidden
+fixed
+top-24
+right-5
+glass
+rounded-2xl
+border
+border-metal-500
+p-6
+z-[9999]
+">
+
+<a href="#about" class="block py-3 text-white">
+ABOUT
+</a>
+
+<a href="#leagues" class="block py-3 text-white">
+LEAGUES
+</a>
+
+<a href="#squad" class="block py-3 text-white">
+SQUAD
+</a>
+
+<a href="#sponsors" class="block py-3 text-white">
+SPONSORS
+</a>
 
 </div>
 
@@ -1501,7 +1657,7 @@ HERO SECTION
 
 <section
 class="
-min-h-screen
+min-h-screen min-h-[100svh]
 flex
 items-center
 justify-center
@@ -5263,5 +5419,17 @@ LUXURY FOOTER
     </div>
 
 </footer>
+                     <script>
+
+function toggleMobileMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList
+.toggle("hidden");
+
+}
+
+</script>
     </body>
 </html>
