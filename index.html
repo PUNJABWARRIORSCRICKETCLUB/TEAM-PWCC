@@ -1251,13 +1251,13 @@ img{
     display:block;
 }
   /* =================================
-   RETURNING VISITOR LOADER CONTROL
+   WEBSITE LOADER
 ================================= */
 
 #siteLoader {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 #siteLoader.loader-hidden {
@@ -1266,6 +1266,21 @@ img{
     pointer-events: none;
 }
 
+
+/* =================================
+   LOGO INTRO
+================================= */
+
+#logoIntro {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#logoIntro.logo-show {
+    opacity: 1;
+    visibility: visible;
+}
 </style>
 
 
@@ -5546,55 +5561,122 @@ LUXURY FOOTER
 
 function toggleMobileMenu(){
 
-document
-.getElementById("mobileMenu")
-.classList
-.toggle("hidden");
+    document
+        .getElementById("mobileMenu")
+        .classList
+        .toggle("hidden");
 
 }
-    document.addEventListener("DOMContentLoaded", function () {
+
+
+/* ==========================================
+   PUNJAB WARRIORS INTRO SYSTEM
+========================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
 
     const loader = document.getElementById("siteLoader");
+    const logoIntro = document.getElementById("logoIntro");
 
-    if (!loader) return;
+    if (!loader || !logoIntro) return;
 
 
     /*
-        Check whether the visitor has already
-        seen the website loader.
+        Check whether the intro has already
+        been shown during this browser session.
     */
 
-    const hasSeenLoader =
-        sessionStorage.getItem("pwccLoaderSeen");
+    const introSeen =
+        sessionStorage.getItem("pwccIntroSeen");
 
 
-    if (hasSeenLoader === "true") {
+    /* ======================================
+       RETURNING FROM ANOTHER PAGE
+       NO LOADER / NO LOGO INTRO
+    ====================================== */
 
-        // Returning to homepage:
-        // hide loader immediately
+    if (introSeen === "true") {
 
         loader.classList.add("loader-hidden");
 
-    } else {
+        logoIntro.classList.remove("logo-show");
 
-        // First visit:
-        // show loader normally
-
-        setTimeout(function () {
-
-            loader.classList.add("loader-hidden");
-
-            sessionStorage.setItem(
-                "pwccLoaderSeen",
-                "true"
-            );
-
-        }, 2500);
-
+        return;
     }
 
+
+    /* ======================================
+       FIRST VISIT
+    ====================================== */
+
+    sessionStorage.setItem(
+        "pwccIntroSeen",
+        "true"
+    );
+
+
+    /*
+        STEP 1
+        Show the text loader
+    */
+
+    setTimeout(function () {
+
+        loader.classList.add("loader-hidden");
+
+    }, 1800);
+
+
+    /*
+        STEP 2
+        Show the detailed logo
+    */
+
+    setTimeout(function () {
+
+        logoIntro.classList.remove("hidden");
+
+        /*
+            Small delay allows the browser
+            to recognise the visibility change
+            before starting the fade.
+        */
+
+        requestAnimationFrame(function () {
+
+            logoIntro.classList.add("logo-show");
+
+        });
+
+    }, 1900);
+
+
+    /*
+        STEP 3
+        Remove the logo intro and reveal
+        the main website.
+    */
+
+    setTimeout(function () {
+
+        logoIntro.classList.remove("logo-show");
+
+    }, 5200);
+
+
+    /*
+        STEP 4
+        Completely remove the intro
+        from interaction.
+    */
+
+    setTimeout(function () {
+
+        logoIntro.classList.add("hidden");
+
+    }, 6100);
+
 });
-    
 
 </script>
 
