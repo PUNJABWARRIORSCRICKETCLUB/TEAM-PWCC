@@ -1250,6 +1250,21 @@ img{
     height:auto;
     display:block;
 }
+  /* =================================
+   RETURNING VISITOR LOADER CONTROL
+================================= */
+
+#siteLoader {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#siteLoader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
 </style>
 
@@ -1267,15 +1282,15 @@ LUXURY LOADER
 ========================== -->
 
 
-<div id="loader"
-
-class="
-fixed inset-0
-z-[9999]
-flex
-items-center
-justify-center
-">
+<div id="siteLoader"
+    class="
+        fixed
+        inset-0
+        z-[9999]
+        flex
+        items-center
+        justify-center"
+  >
 
 
 <div class="text-center">
@@ -5537,6 +5552,48 @@ document
 .toggle("hidden");
 
 }
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const loader = document.getElementById("siteLoader");
+
+    if (!loader) return;
+
+
+    /*
+        Check whether the visitor has already
+        seen the website loader.
+    */
+
+    const hasSeenLoader =
+        sessionStorage.getItem("pwccLoaderSeen");
+
+
+    if (hasSeenLoader === "true") {
+
+        // Returning to homepage:
+        // hide loader immediately
+
+        loader.classList.add("loader-hidden");
+
+    } else {
+
+        // First visit:
+        // show loader normally
+
+        setTimeout(function () {
+
+            loader.classList.add("loader-hidden");
+
+            sessionStorage.setItem(
+                "pwccLoaderSeen",
+                "true"
+            );
+
+        }, 2500);
+
+    }
+
+});
     
 
 </script>
