@@ -1446,11 +1446,13 @@ button, a {
         overflow-y: auto;
     }
 
-    #playerCardImage {
-        width: 100%;
-        max-height: 46svh;
-        object-fit: contain;
-    }
+ #playerCardImage {
+    width: 100%;
+    height: auto;
+    max-height: 75svh;
+    object-fit: contain;
+    object-position: center;
+}
 
     .sponsor-logo {
         width: min(70vw, 180px);
@@ -1612,6 +1614,21 @@ body.image-viewer-open {
         max-height: calc(100dvh - 16px);
         padding: 16px;
         border-radius: 16px;
+    }
+}
+  @media (max-width: 767px) {
+    .image-viewer {
+        padding: 64px 8px 12px;
+        overflow-y: auto;
+    }
+
+    #fullSizeImage {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: calc(100dvh - 100px);
+        object-fit: contain;
+        object-position: center;
     }
 }
 
@@ -3713,40 +3730,9 @@ justify-center
 ">
 
 
-<img
-
-id="playerCardImage"
-
-class="
-
-w-full
-
-h-[600px]
-
-object-cover
-
-object-top
-
-rounded-3xl
-
-border
-
-border-metal-500
-
-shadow-[0_0_40px_rgba(255,215,0,.4)]
-
-"
-
->
-
+<img id="playerCardImage" class="w-full h-auto max-h-[75svh] object-contain object-center rounded-3xl border border-metal-500 shadow-[0_0_40px_rgba(255,215,0,.4)]">
 
 </div>
-
-
-
-
-
-
 
 
 <!-- STATS -->
